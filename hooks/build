@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+# See https://docs.docker.com/docker-cloud/builds/advanced/
+
+# printenv
+# env
+
+docker build \
+    --build-arg=PMACCT_VERSION=$SOURCE_BRANCH \
+    -t $IMAGE_NAME \
+    -f $DOCKERFILE_PATH .
